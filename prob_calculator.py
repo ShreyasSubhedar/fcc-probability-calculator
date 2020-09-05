@@ -9,7 +9,7 @@ class Hat:
         for itr in range(value):
           self.contents.append(key)
   
-
+  # Function to get random n number of hats from contents
   def draw(self,amount):
       draw_list = []
       if amount >= len(self.contents):
@@ -21,10 +21,10 @@ class Hat:
 
 
   
-
+  # Function to get the probability
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     final_count=0
-    for exp in range(num_experiments):
+    for _ in range(num_experiments):
       copyhat = copy.deepcopy(hat)
       temp_list = copyhat.draw(num_balls_drawn)
       success=True
